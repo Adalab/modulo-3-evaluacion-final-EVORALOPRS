@@ -7,6 +7,7 @@ import { Route, Routes, matchPath, useLocation} from "react-router-dom"
 import DetailCharacter from "./DetailCharacter"
 import FilterCharacter from "./Filter/FilterCharacter"
 import FilterHouse from "./Filter/FilterHouse"
+import '../scss/index.scss'
 // trabajamos con las rutas
 
 
@@ -39,15 +40,14 @@ function App() {
   .sort((a, b) => {
     //ordenar por nombre
     if(sortList === "asc"){
-      return a.name.localeCompare(b.name);// orden ascendente
-
+      return a.name.localeCompare(b.name);// orden ascendente(A-Z)
     }else{
-      return b.name.localeCompare(a.name);// orden descendente
+      return b.name.localeCompare(a.name);// orden descendente(Z-A)
     }    
   })
 
   const sortOrderList = () =>{
-    setSortList((item)=> (item === "asc" ? "desc" : "acs"));
+    setSortList((item)=> (item === "asc" ? "desc" : "asc"));
   }
 
 
@@ -67,7 +67,7 @@ function App() {
       <Route path="/character/:id" element={<DetailCharacter data={characterDetail}/>} />
       <Route path="/" element={
       <>
-        <FilterCharacter  setFilterName={setFilterName}/>
+        <FilterCharacter  setFilterName={setFilterName} />
         <FilterHouse setFilterHouse={setFilterHouse} />
         <ListCharacter list={filterCharacter} sort={sortOrderList} sortOrder={sortList}/>
       </>

@@ -5,7 +5,8 @@
 
 function FilterHouse({setFilterHouse}) {
     const handleSelectChange =(ev)=>{
-        setFilterHouse(ev.target.value)
+      setFilterHouse(ev.target.value)
+       
 
     }
   return (
@@ -14,7 +15,7 @@ function FilterHouse({setFilterHouse}) {
         <select id="house" onChange={handleSelectChange}>
             <option value="all">Todas</option>
             <option value="Gryffindor">Gryffindor</option>
-            <option value="Huffelpuff">Huffelpuff</option>
+            <option value="Hufflepuff">Hufflepuff</option>
             <option value="Slytherin">Slytherin</option>
             <option value="Ravenclaw">Ravenclaw</option>
         </select>

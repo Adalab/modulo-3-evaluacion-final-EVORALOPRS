@@ -19,7 +19,7 @@ function ListCharacter({list, sort, sortOrder }) {
   return (
     
     <div>
-      <button onClick={handleClick}> Ordena  {sortOrder === "asc" ? "Descendente" : "Ascendente" } </button>
+      <button onClick={handleClick}> Ordena  {sortOrder === "asc" ? "A-Z" : "Z-A" } </button>
         {/*En la siguiente línea de codigo, renderizamos y ejecutamos la función infoCharacter devolviendo un array de componentes*/}
         {infoCharacter()}   
         
