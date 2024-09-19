@@ -1,5 +1,5 @@
 
-
+import '../scss/filterHouse.scss'
 
 
 
@@ -10,16 +10,18 @@ function FilterHouse({setFilterHouse}) {
 
     }
   return (
-    <form>
-        <label htmlFor="house"> Selecciona la casa: </label>
-        <select id="house" onChange={handleSelectChange}>
+    <>
+        <label className='formHouse' htmlFor="house"> Selecciona la casa: </label>
+        <select className='selectHouse' id="house" onChange={handleSelectChange}>
             <option value="all">Todas</option>
             <option value="Gryffindor">Gryffindor</option>
             <option value="Hufflepuff">Hufflepuff</option>
             <option value="Slytherin">Slytherin</option>
             <option value="Ravenclaw">Ravenclaw</option>
         </select>
-    </form>
+    </>
+        
+   
   )
 }
 

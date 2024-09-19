@@ -1,12 +1,14 @@
-import harryHeader from "../images/logo-header-hp.png"
+import harryHeader from "../images/Harry-James-Potter-emblema.jpg"
 import '../scss/header.scss'
 
 
-
 function Header() {
+ 
   return (
-    
-   <img src={harryHeader} alt="Harry Potter" />
+    <div className="container-header">
+       <img className="img-header" src={harryHeader} alt="Harry Potter" />
+    </div>
+   
   )
 }
 
